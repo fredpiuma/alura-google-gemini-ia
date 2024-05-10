@@ -1,6 +1,6 @@
 # Meu Projeto Python
 
-Este é um projeto Python que consiste em um aplicativo com um ponto de entrada principal e módulos adicionais.
+Este projeto é uma aplicação Python que integra a API do Google AI Studio para explorar várias aplicações de Inteligência Artificial.
 
 ## Estrutura do Projeto
 
