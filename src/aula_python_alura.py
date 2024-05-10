@@ -12,24 +12,24 @@ palavraSecreta = valorSecreto['palavra']
 dica = valorSecreto['dica']
 
 print("Bem-vindo ao jogo da forca!")
-print("A palavra secreta tem", len(palavraSecreta), "letras.")
+print(f"A palavra secreta tem {len(palavraSecreta)} letras.")
 print("Dica:", dica)
 
 acertou = False
 enforcou = False
 erros = 0
-letrasErradas = []
+tentativas = []
 
 while not acertou and not enforcou:
-    chute = input("Digite uma letra: ")
-    if chute in palavraSecreta:
-        print("Você acertou uma letra!")
+    chute = input("Digite seu chute: ")
+    if chute == palavraSecreta:
+        print("Você acertou seu chute!")
     else:
-        print("Você errou uma letra!")
-        erros += 1
-        letrasErradas.append(chute)
-    enforcou = erros == 6
-    acertou = set(palavraSecreta) == set(letrasErradas)
+        print("Você errou seu chute!")
+        tentativas.append(chute)
+    enforcou = len(tentativas) == 3
+    # acertou = set(palavraSecreta) == set(tentativas)
+    acertou = palavraSecreta==chute
 
 if acertou:
     print("Você acertou a palavra secreta!")
