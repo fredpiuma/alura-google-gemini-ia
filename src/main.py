@@ -16,4 +16,4 @@ def main():
     print("Diretório do projeto:", os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 if __name__ == "__main__":
-    main()
+    main()  
